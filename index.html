@@ -1,913 +1,142 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
+<html lang="ko">
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="assets/js/main1.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <script src="assets/js/main.js"></script>
     <title>Roni's Page</title>
-  </head>
-  <body>
-    <div class="wrap">
-      <div class="vid">
-        <video class="vid_frame" autoplay muted loop>
-          <source src="assets/images/Dark - 21449.mp4" type="video/mp4">
-        </video>
-        <div class="background"></div>
-      </div>
-      <header>
-        <h1><a href="#"><img src="assets/images/roni_logo.png" alt="로운페이지로고"></a></h1>
-        <nav>
-          <ul class="top_menu">
-            <li class="on"><a href="#">home</a></li>
-            <li><a href="#">profile</a></li>
-            <li><a href="#">skills</a></li>
-            <li><a href="#">artworks</a>
-              <ul class="top_menu_2depth art">
-                <li><a class="artworks01" href="#">#Popup design 01</a></li>
-                <li><a class="artworks02" href="#">#Popup design 02</a></li>
-                <li><a class="artworks03" href="#">#Banner design</a></li>
-              </ul>
-            </li>
-            <li><a href="#">redesigns</a>
-              <ul class="top_menu_2depth web">
-                <li><a class="web01" href="#">#01 Baskin Robbins</a></li>
-                <li><a class="web02" href="#">#02 Designhouse</a></li>
-                <li><a class="web03" href="#">#03 경기아트센터</a></li>
-                <li><a class="web04" href="#">#04 미에로화이바</a></li>
-              </ul>
-            </li>
-            <li><a href="#">application</a>
-              <ul class="top_menu_2depth app">
-                <li><a class="app01" href="#">#01 Midnight</a></li>
-                <li><a class="app02" href="#">#02 Midnight Moodboard</a></li>
-                <li><a class="app03" href="#">#03 Midnight Point</a></li>
-              </ul>
-            </li>
-            <li><a href="#">contact</a></li>
-          </ul>
+</head>
+
+<body>
+<div class="background">
+    <video class="background__video" autoplay muted loop>
+        <source src="assets/videos/dark.mp4" type="video/mp4">
+    </video>
+    <div class="background__mask"></div>
+</div>
+<header class="header">
+    <div class="header__container">
+        <h1 class="header__logo">
+            <a href="#">
+                <img src="assets/images/roni_logo.png" alt="ronispage 로고">
+            </a>
+        </h1>
+        <nav class="header__menu menu">
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a class="menu__name" href="#">home</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__name" href="#">profile</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__name" href="#">publishing</a>
+                    <div class="submenu">
+                        <div class="submenu__container">
+                            <ul class="submenu__list">
+                                <li class="submenu__item">
+                                    <a class="submenu__name" href="#">#1 하이트진로</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="menu__name" href="#">contact</a>
+                </li>
+            </ul>
         </nav>
-      </header>
-      <div class="sideBar">
-        <div class="sideBar_line"></div>
-        <div class="lds-circle"><div></div></div>
-        <ul class="sideBar_text">
-          <li class="on"><a href="#">home</a></li>
-          <li><a href="#">profile</a></li>
-          <li><a href="#">mySkills</a></li>
-          <li><a href="#">artworks</a>
-            <ul class="sideBar_2depth art_child">
-              <li><a class="artworks01" href="#"># Popup design 01</a></li>
-              <li><a class="artworks02" href="#"># Popup design 02</a></li>
-              <li><a class="artworks03" href="#"># Banner design</a></li>
-            </ul>
-          </li>
-          <li><a href="#">redesigns</a>
-            <ul class="sideBar_2depth web_child">
-              <li><a class="web01" href="#"># 01 Baskin Robbins</a></li>
-              <li><a class="web02" href="#"># 02 Designhouse</a></li>
-              <li><a class="web03" href="#"># 03 경기아트센터</a></li>
-              <li><a class="web04" href="#"># 04 미에로화이바</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Application</a>
-            <ul class="sideBar_2depth app_child">
-              <li><a class="app01" href="#"># 01 Midnight</a></li>
-              <li><a class="app02" href="#"># 02 Midnight Moodboard</a></li>
-              <li><a class="app03" href="#"># 03 Midnight Point</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-      <div class="scroll">
-        <div class="scroll_cicle">
-          <div class="scroll_dot"></div>
-        </div>
-        <a href="#">scroll</a>
-      </div>
-      <div id="content_wrap">
-        <div id="home" class="home">
-          <div class="title">
-            <ul>
-              <li><div>W</div></li>
-              <li><div>E</div></li>
-              <li><div>B</div></li>
-            </ul>
-            <ul>
-              <li><div>P</div></li>
-              <li><div>U</div></li>
-              <li><div>B</div></li>
-              <li><div>L</div></li>
-              <li><div>I</div></li>
-              <li><div>S</div></li>
-              <li><div>H</div></li>
-              <li><div>E</div></li>
-              <li><div>R</div></li>
-            </ul>
-          </div>
-          <div class="text">
-            <p>안녕하세요!</p>
-            <p>저는 우주만 한 열정과 아이디어로 가득한 김로운입니다.</p>
-            <p>"끝없는 발전을 위해 노력하는 웹 퍼블리셔"가 되겠습니다 ✦‿✦</p>
-          </div>
-          <div class="blob one"></div>
-          <div class="blob two"></div>
-          <div class="blob thr"></div>
-          <div class="blob four"></div>
-          <div class="blob five"></div>
-          <div class="blob six"></div>
-        </div>
-        <div id="profile" class="profile">
-          <div class="profile_left">
-            <figure>
-              <img class="roni1 on" src="assets/images/roni.png" alt="프로필 이미지">
-              <img class="roni2" src="assets/images/roni2.png" alt="프로필 이미지">
-            </figure>
-            <p>안녕하세요 저는 김로운입니다!<br> 웹 퍼블리셔는 저의 감성적인 면과 이성적인 면을 모두 발휘 할 수 있는 일이라고 생각합니다.<br> 아직 부족한 점이 있지만, 한가지 약속드릴 수 있는 것은 "누구보다 열심히 그리고 책임감 있게 일한다"는 각오입니다!</p>
-          </div>
-          <div class="profile_right">
-            <h3>#My Keywords</h3>
-            <i>Hover keywords!</i>
-            <div class="keyword_list">
-              <ul>
-                <li>#분당구<div><p>출퇴근 가능!!</p></div></li>
-                <li>#아이디어왕<div><p>새로운 생각 뿜뿜!</p></div></li>
-                <li>#눈치백단<div><p>시키기전에 알아서!</p></div></li>
-              </ul>
-              <ul>
-                <li>#1995<div><p>열정가득 만 25세</p></div></li>
-                <li>#도전정신<div><p>시켜만주세요!</p></div></li>
-                <li>#책임감<div><p>내 일은 내가 끝까지!</p></div></li>
-              </ul>
-              <ul>
-                <li>#5G<div><p>빠른 손놀림!</p></div></li>
-                <li>#센스왕<div><p>상황대처능력 Good!</p></div></li>
-                <li>#커뮤니케이션<div><p>다년간의 서비스 경험!</p></div></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div id="skills" class="myskills">
-          <div class="myskills_area">
-            <h3>#My Skills</h3>
-            <div class="skills">
-              <ul class="skills_left">
-                <li>
-                  <img src="assets/images/html_logo.png" alt="html logo">
-                  <div class="text_box">
-                    <div class="skill_bar">
-                      <div class="html_bar"><span>95</span></div>
-                    </div>
-                    <p>웹 표준을 준수하며 유지 및 보수가 유용하도록 효율적인 마크업을 합니다.</p>
-                  </div>
-                </li>
-                <li>
-                  <img src="assets/images/css_logo.png" alt="css logo">
-                  <div class="text_box">
-                    <div class="skill_bar">
-                      <div class="css_bar"><span>95</span></div>
-                    </div>
-                    <p>깔끔한 코드로 다양한 레이아웃과 스타일을 입히고 미디어 쿼리를 활용하여 브라우저 크기에 대응하는 반응형 레이아웃을 구현합니다.</p>
-                  </div>
-                </li>
-                <li>
-                  <img src="assets/images/js_logo.png" alt="js logo">
-                  <div class="text_box">
-                    <div class="skill_bar">
-                      <div class="js_bar"><span>70</span></div>
-                    </div>
-                    <p>자바스크립트의 기본 문법을 이해하고 기본적인 알고리즘 문제를 해결합니다.</p>
-                  </div>
-                </li>
-              </ul>
-              <ul class="skill_right">
-                <li>
-                  <img src="assets/images/jq_logo.png" alt="jquery logo">
-                  <div class="text_box">
-                    <div class="skill_bar">
-                      <div class="jq_bar"><span>85</span></div>
-                    </div>
-                    <p>제이쿼리 라이브러리를 활용하여 깔끔하고 효율적으로 다양한 기능과 효과를 적용합니다.</p>
-                  </div>
-                </li>
-                <li>
-                  <img src="assets/images/ps_logo.png" alt="ps logo">
-                  <div class="text_box">
-                    <div class="skill_bar">
-                      <div class="ps_bar"><span>80</span></div>
-                    </div>
-                    <p>포토샵 툴을 사용하여 사진 편집, 합성등의 그래픽 작업을 비롯한 다양한 웹 디자인이 가능합니다.</p>
-                  </div>
-                </li>
-                <li>
-                  <img src="assets/images/ai_logo.png" alt="ai logo">
-                  <div class="text_box">
-                    <div class="skill_bar">
-                      <div class="ai_bar"><span>90</span></div>
-                    </div>
-                    <p>아이콘 제작 및 벡터 소스의 자유로운 제작과 편집이 가능합니다.</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div id="artworks" class="artworks01">
-          <div class="popup1">
-            <div class="artworks_left">
-              <h3>#Popup Design 01</h3>
-              <i>Please click my artworks!</i>
-              <p>팝업 기획 & 그에 따른 테마 선정<br>테마의 특성을 살린 컬러와 아이콘 디자인을 통한 팝업<br> 디자인 & 브랜드별 아이덴티티를 살린 컬러 매치와<br> 아이콘 디자인 </p>
-            </div>
-            <div class="artworks_right">
-              <ul>
-                <li>
-                  <a href="#">
-                    <img src="assets/images/pop_k.png" alt="1300k">
-                  </a>
-                  <div class="hover_wrap"></div>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="assets/images/pop_christmas.png" alt="크리스마스">
-                  </a>
-                  <div class="hover_wrap"></div>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="assets/images/pop_ten.png" alt="텐바이텐">
-                  </a>
-                  <div class="hover_wrap"></div>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="assets/images/pop_coupon.png" alt="위즈위드">
-                  </a>
-                  <div class="hover_wrap"></div>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="assets/images/pop_pizza.png" alt="피자헛">
-                  </a>
-                  <div class="hover_wrap"></div>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="assets/images/pop_bigsale.png" alt="더블유랩">
-                  </a>
-                  <div class="hover_wrap"></div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="artworks_detail one">
-            <ul>
-              <li>
-                <img src="assets/images/pop_k.png" alt="1300k">
-                <div class="txtbox">
-                  <h2>#My artworks 01</h2>
-                  <h4>#01<br>디자인 감성 쇼핑몰 1300K</h4>
-                  <p>1300K는 모든 고객이 감각적인 개성과 각기 다른 취향을 마음껏 연출하고 표현할 수 있도록 맞춤형 라이프 스타일을 공유 & 제안하고자 하는 온라인편집샵이다.</P>
-                  <p>따라서 색채감이 뚜렷한 컬러를 바탕으로 1300k의 대표 캐릭터를 함께 사용하여 개성을 살린 팝업을 디자인하였다. </p>
-                  <section class="colorp one_one">
-                    <h3>#Color</h3>
-                    <ul>
-                      <li>#ed6df0</li>
-                      <li>#fbffff</li>
-                      <li>#c88961</li>
-                      <li>#010101</li>
-                    </ul>
-                  </section>
-                </div>
-                <div class="close">
-                  <a href="#"><img src="assets/images/close.png" alt="닫힘아이콘"></a>
-                </div>
-              </li>
-              <li>
-                <img src="assets/images/pop_christmas.png" alt="크리스마스">
-                <div class="txtbox">
-                  <h2>#My artworks 02</h2>
-                  <h4>#02<br>크리스마스 팝업</h4>
-                  <p>크리스마스를 대표하는 산타의 옷과 배경을 큰 레이아웃으로 잡고 레드와 그린 컬러를 메인으로 하여 팝업을 제작하였습니다.</P>
-                  <p>구매 시 추첨을 통해 선물을 주는 방식을 일러스트를 통해 직관적으로 디자인하였습니다.</p>
-                  <section class="colorp one_two">
-                    <h3>#Color</h3>
-                    <ul>
-                      <li>#275e32</li>
-                      <li>#af1e0e</li>
-                      <li>#f5d211</li>
-                      <li>#f8fefc</li>
-                    </ul>
-                  </section>
-                </div>
-                <div class="close">
-                  <a href="#"><img src="assets/images/close.png" alt="닫힘아이콘"></a>
-                </div>
-              </li>
-              <li>
-                <img src="assets/images/pop_ten.png" alt="텐바이텐">
-                <div class="txtbox">
-                  <h2>#My artworks 03</h2>
-                  <h4>#03<br>디자인 편집샵 텐바이텐</h4>
-                  <p>"You're already different"라는 슬로건을 가지고 텐바이텐 고객들의 다양한 취향을 충족하고자 하는 디자인브랜드 편집샵이다.</P>
-                  <p>오프라인 매장 오픈을 알리는 팝업으로 기존 온라인 고객이 익숙하게 다가올 수 있도록 텐바이텐의 부드러운 곡선미를 살려 디자인하였다.</p>
-                  <section class="colorp one_three">
-                    <h3>#Color</h3>
-                    <ul>
-                      <li>#509ef5</li>
-                      <li>#e82b38</li>
-                      <li>#3870c0</li>
-                      <li>#fefdf0</li>
-                    </ul>
-                  </section>
-                </div>
-                <div class="close">
-                  <a href="#"><img src="assets/images/close.png" alt="닫힘아이콘"></a>
-                </div>
-              </li>
-              <li>
-                <img src="assets/images/pop_coupon.png" alt="위즈위드">
-                <div class="txtbox">
-                  <h2>#My artworks 04</h2>
-                  <h4>#04<br>위즈위드</h4>
-                  <p>WIZWID는 해외 쇼핑 서비스(해외 수입 대행 및 배송 대행 서비스) 및 국내 쇼핑 서비스를 제공하는 TREND LEADING No1 Shopping Platform이다.</P>
-                  <p>전체적으로 톤 다운된 컬러들도 브랜드의 세련되고 깔끔한 이미지를 담았다.</p>
-                  <section class="colorp one_four">
-                    <h3>#Color</h3>
-                    <ul>
-                      <li>#5b717b</li>
-                      <li>#e9e057</li>
-                      <li>#323431</li>
-                      <li>#e94d43</li>
-                    </ul>
-                  </section>
-                </div>
-                <div class="close">
-                  <a href="#"><img src="assets/images/close.png" alt="닫힘아이콘"></a>
-                </div>
-              </li>
-              <li>
-                <img src="assets/images/pop_pizza.png" alt="피자헛">
-                <div class="txtbox">
-                  <h2>#My artworks 05</h2>
-                  <h4>#05<br>피자헛</h4>
-                  <p><프리미엄 하프 앤 하프>라는 신제품을 알리기 위해 문제 형식으로 다양한 엣지의 종류를 보여준다.</P>
-                  <p>피자헛의 메인 컬러인 레드와 옐로우를 활용하여 디자인하였고 블랙을 최소화하여 문제에 있는 텍스트에 시선이 집중되도록 디자인하였다.</p>
-                  <section class="colorp one_five">
-                    <h3>#Color</h3>
-                    <ul>
-                      <li>#b62009</li>
-                      <li>#f8e14f</li>
-                      <li>#f8e0b2</li>
-                      <li>#ffffff</li>
-                    </ul>
-                  </section>
-                </div>
-                <div class="close">
-                  <a href="#"><img src="assets/images/close.png" alt="닫힘아이콘"></a>
-                </div>
-              </li>
-              <li>
-                <img src="assets/images/pop_bigsale.png" alt="더블유랩">
-                <div class="txtbox">
-                  <h2>#My artworks 06</h2>
-                  <h4>#06<br>더블유랩</h4>
-                  <p>더블유랩은 좋은 성분을 기반으로 하여 피부와 뷰티라이프를 위한 화장품을 만드는 기업으로 깨끗하고 맑은 이미지를 추구한다.</P>
-                  <p>빅세일을 알리는 팝업으로 폭죽 레이어와 네온사인 효과를 이용하여 디자인하였다.</p>
-                  <section class="colorp one_six">
-                    <h3>#Color</h3>
-                    <ul>
-                      <li>#8c0c9f</li>
-                      <li>#dddbe3</li>
-                      <li>#ffee55</li>
-                      <li>#592a6a</li>
-                    </ul>
-                  </section>
-                </div>
-                <div class="close">
-                  <a href="#"><img src="assets/images/close.png" alt="닫힘아이콘"></a>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div id="artworks02" class="artworks02">
-          <div class="artworks2_text">
-            <h3>#Popup Design 02</h3>
-            <i>Please click my popup designs for details ✦‿✦</i>
-          </div>
-          <ul class="popup2">
-            <li>
-              <a href="#"><img src="assets/images/pop_cgv.png" alt="cgv 원데이 무비트립"></a>
-              <div class="hover_wrap"></div>
-            </li>
-            <li>
-              <a href="#"><img src="assets/images/pop_halloween.png" alt="할로윈"></a>
-              <div class="hover_wrap"></div>
-            </li>
-            <li>
-              <a href="#"><img src="assets/images/pop_chu.png" alt="추석"></a>
-              <div class="hover_wrap"></div>
-            </li>
-            <li>
-              <a href="#"><img src="assets/images/pop_sul.png" alt="설날팝업"></a>
-              <div class="hover_wrap"></div>
-            </li>
-            <li>
-              <a href="#"><img src="assets/images/pop_summer.png" alt="여름팝업"></a>
-              <div class="hover_wrap"></div>
-            </li>
-          </ul>
-          <div class="artworks_detail two">
-            <ul>
-              <li>
-                <img src="assets/images/pop_cgv.png" alt="cgv 원데이 무비트립">
-                <div class="txtbox">
-                  <h2>#My artworks 07</h2>
-                  <h4>#07<br>CGV 원데이 무비 트립</h4>
-                  <p>코로나로 인해 여행이 제한된 요즘, 영화를 통해 세계여행을 떠나보자는 컨셉의 이벤트이다. </P>
-                  <p>세계의 다양한 랜드마크와 비행기, 배 등의 교통수단을 일러스트로 디자인하여 여행의 느낌을 살려 디자인하였다.</p>
-                  <section class="colorp two_one">
-                    <h3>#Color</h3>
-                    <ul>
-                      <li>#79cbe1</li>
-                      <li>#fbf3dc</li>
-                      <li>#143056</li>
-                      <li>#fefdf8</li>
-                    </ul>
-                  </section>
-                </div>
-                <div class="close">
-                  <a href="#"><img src="assets/images/close.png" alt="닫힘아이콘"></a>
-                </div>
-              </li>
-              <li>
-                <img src="assets/images/pop_halloween.png" alt="할로윈">
-                <div class="txtbox">
-                  <h2>#My artworks 08</h2>
-                  <h4>#08<br>Halloween Event</h4>
-                  <p>할로윈 데 을 맞이하여 3가지 이벤트를 안내하며 구매 참여를 유도하는 팝업이다.</P>
-                  <p>할로윈을 대표하는 귀신, 박쥐, 거미등의 일러스트를 사용하였고 무섭기보다 친근한 분위기로 디자인하였다.</p>
-                  <section class="colorp two_two">
-                    <h3>#Color</h3>
-                    <ul>
-                      <li>#a75778</li>
-                      <li>#171c32</li>
-                      <li>#f9e97d</li>
-                      <li>#ea9b37</li>
-                    </ul>
-                  </section>
-                </div>
-                <div class="close">
-                  <a href="#"><img src="assets/images/close.png" alt="닫힘아이콘"></a>
-                </div>
-              </li>
-              <li>
-                <img src="assets/images/pop_chu.png" alt="추석">
-                <div class="txtbox">
-                  <h2>#My artworks 09</h2>
-                  <h4>#09<br>추석 휴무안내 팝업</h4>
-                  <p>추석 휴무 일정을 알리는 팝업으로 <해피추석>이라는 타이틀을 크게 배치하였다.</P>
-                  <p>한국적인 문양과 질감을 살려 배경을 만들고 오방색으로 추석을 느낌을 더하여 디자인하였다.</p>
-                  <section class="colorp two_three">
-                    <h3>#Color</h3>
-                    <ul>
-                      <li>#6e2bce</li>
-                      <li>#f9e0ce</li>
-                      <li>#f6d198</li>
-                      <li>#77f6f2</li>
-                    </ul>
-                  </section>
-                </div>
-                <div class="close">
-                  <a href="#"><img src="assets/images/close.png" alt="닫힘아이콘"></a>
-                </div>
-              </li>
-              <li>
-                <img src="assets/images/pop_sul.png" alt="설날팝업">
-                <div class="txtbox">
-                  <h2>#My artworks 10</h2>
-                  <h4>#10<br>설날 할인쿠폰 팝업</h4>
-                  <p>설 이벤트로 세뱃돈 대신 할인쿠폰을 주는 이벤트를 알리는 팝업이다.</P>
-                  <p>두 가지 쿠폰 발행 안내를 바탕으로 설의 느낌을 살리기 위한 한국적인 문양과 일러스트를 이용하여 디자인하였다.</p>
-                  <section class="colorp two_four">
-                    <h3>#Color</h3>
-                    <ul>
-                      <li>#f2dfdc</li>
-                      <li>#904246</li>
-                      <li>#fbfaf6</li>
-                      <li>#7d5e5c</li>
-                    </ul>
-                  </section>
-                </div>
-                <div class="close">
-                  <a href="#"><img src="assets/images/close.png" alt="닫힘아이콘"></a>
-                </div>
-              </li>
-              <li>
-                <img src="assets/images/pop_summer.png" alt="여름팝업">
-                <div class="txtbox">
-                  <h2>#My artworks 11</h2>
-                  <h4>#11<br>여름팝업</h4>
-                  <p>여름맞이 이벤트를 알리는 팝업으로 각각의 3가지 이벤트와 이벤트 쿠폰발행안내를 기본으로 하여 기획하였다.</P>
-                  <p>바다를 기본 배경으로 하여 각각의 이벤트를 배경에 어울어지는 일러스트 디자인을 통하여 제작하였다.</p>
-                  <section class="colorp two_four">
-                    <h3>#Color</h3>
-                    <ul>
-                      <li>#5dbee4</li>
-                      <li>#f8efd0</li>
-                      <li>#3062a5</li>
-                      <li>#ffffff</li>
-                    </ul>
-                  </section>
-                </div>
-                <div class="close">
-                  <a href="#"><img src="assets/images/close.png" alt="닫힘아이콘"></a>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div id ="artworks3" class="artworks03">
-          <div class="artworks3_text">
-            <h3>#Banner Design</h3>
-            <i>Please click my banners for othersizes ✦‿✦</i>
-          </div>
-          <div class="artworks3">
-            <ul>
-              <li>
-                <a href="#"><img src="assets/images/banner_wconcept1920.png" alt="wconcept배너"></a>
-                <div class="hover_wrap"></div>
-              </li>
-              <li>
-                <a href="#"><img src="assets/images/banner_mall1920.png" alt="통로몰배너"></a>
-                <div class="hover_wrap"></div>
-              </li>
-              <li>
-                <a href="#"><img src="assets/images/banner_peng1920.png" alt="펭수배너"></a>
-                <div class="hover_wrap"></div>
-              </li>
-              <li>
-                <a href="#"><img src="assets/images/banner_christ1920.png" alt="크리스마스배너"></a>
-                <div class="hover_wrap"></div>
-              </li>
-              <li>
-                <a href="#"><img src="assets/images/banner_brandi1920.png" alt="브랜디배너"></a>
-                <div class="hover_wrap"></div>
-              </li>
-              <li>
-                <a href="#"><img src="assets/images/banner_card1920.png" alt="국민카드배너"></a>
-                <div class="hover_wrap"></div>
-              </li>
-            </ul>
-          </div>
-          <div class="artworks_detail three">
-            <ul>
-              <li>
-                <h5>* 다양한 사용자의 디바이스 환경에 맞추어 여러 사이즈로 제작하였습니다. *</h5>
-                <figure>
-                  <img src="assets/images/banner_wconcept1920.png" alt="wconcept1920">
-                  <p># W컨셉 배너 PC 사이즈 (1920*500) </p>
-                </figure>
-                <figure>
-                  <img src="assets/images/banner_wconcept1080.png" alt="wconcept1040">
-                  <p># W컨셉 배너 Tablet 사이즈 (1040*400) </p>
-                </figure>
-                <figure>
-                  <img src="assets/images/banner_wconcept768.png" alt="wconcept768">
-                  <p># W컨셉 배너 Mobile 사이즈 (768*300) </p>
-                </figure>
-                <div class="close">
-                  <a href="#"><img src="assets/images/close.png" alt="닫힘아이콘"></a>
-                </div>
-              </li>
-              <li>
-                <h5>* 다양한 사용자의 디바이스 환경에 맞추어 여러 사이즈로 제작하였습니다. *</h5>
-                <figure>
-                  <img src="assets/images/banner_mall1920.png" alt="통로몰1920">
-                  <p># 통로몰 배너 PC 사이즈 (1920*500) </p>
-                </figure>
-                <figure>
-                  <img src="assets/images/banner_mall1040.png" alt="통로몰1040">
-                  <p># 통로몰 배너 Tablet 사이즈 (1040*400) </p>
-                </figure>
-                <figure>
-                  <img src="assets/images/banner_mall768.png" alt="통로몰768">
-                  <p># 통로몰 배너 Mobile 사이즈 (768*300) </p>
-                </figure>
-                <div class="close">
-                  <a href="#"><img src="assets/images/close.png" alt="닫힘아이콘"></a>
-                </div>
-              </li>
-              <li>
-                <h5>* 다양한 사용자의 디바이스 환경에 맞추어 여러 사이즈로 제작하였습니다. *</h5>
-                <figure>
-                  <img src="assets/images/banner_peng1920.png" alt="펭수1920">
-                  <p># 스노위랜드 배너 PC 사이즈 (1920*500) </p>
-                </figure>
-                <figure>
-                  <img src="assets/images/banner_peng1040.png" alt="펭수1040">
-                  <p># 스노위랜드 배너 Tablet 사이즈 (1040*400) </p>
-                </figure>
-                <figure>
-                  <img src="assets/images/banner_peng768.png" alt="펭수768">
-                  <p># 스노위랜드 배너 Mobile 사이즈 (768*300) </p>
-                </figure>
-                <div class="close">
-                  <a href="#"><img src="assets/images/close.png" alt="닫힘아이콘"></a>
-                </div>
-              </li>
-              <li>
-                <h5>* 다양한 사용자의 디바이스 환경에 맞추어 여러 사이즈로 제작하였습니다. *</h5>
-                <figure>
-                  <img src="assets/images/banner_christ1920.png" alt="크리스마스1920">
-                  <p># 크리스마스 배너 PC 사이즈 (1920*500) </p>
-                </figure>
-                <figure>
-                  <img src="assets/images/banner_christ1040.png" alt="크리스마스1040">
-                  <p># 크리스마스 배너 Tablet 사이즈 (1040*400) </p>
-                </figure>
-                <figure>
-                  <img src="assets/images/banner_christ768.png" alt="크리스마스768">
-                  <p># 크리스마스 배너 Mobile 사이즈 (768*300) </p>
-                </figure>
-                <div class="close">
-                  <a href="#"><img src="assets/images/close.png" alt="닫힘아이콘"></a>
-                </div>
-              </li>
-              <li>
-                <h5>* 다양한 사용자의 디바이스 환경에 맞추어 여러 사이즈로 제작하였습니다. *</h5>
-                <figure>
-                  <img src="assets/images/banner_brandi1920.png" alt="브랜디1920">
-                  <p># 브랜디 배너 PC 사이즈 (1920*500) </p>
-                </figure>
-                <figure>
-                  <img src="assets/images/banner_brandi1080.png" alt="브랜디1040">
-                  <p># 브랜디 배너 Tablet 사이즈 (1040*400) </p>
-                </figure>
-                <figure>
-                  <img src="assets/images/banner_brandi768.png" alt="브랜디768">
-                  <p># 브랜디 배너 Mobile 사이즈 (768*300) </p>
-                </figure>
-                <div class="close">
-                  <a href="#"><img src="assets/images/close.png" alt="닫힘아이콘"></a>
-                </div>
-              </li>
-              <li>
-                <h5>* 다양한 사용자의 디바이스 환경에 맞추어 여러 사이즈로 제작하였습니다. *</h5>
-                <figure>
-                  <img src="assets/images/banner_card1920.png" alt="국민카드1920">
-                  <p># 국민카드 배너 PC 사이즈 (1920*500) </p>
-                </figure>
-                <figure>
-                  <img src="assets/images/banner_card1040.png" alt="국민카드1040">
-                  <p># 국민카드 배너 Tablet 사이즈 (1040*400) </p>
-                </figure>
-                <figure>
-                  <img src="assets/images/banner_card768.png" alt="국민카드768">
-                  <p># 국민카드 배너 Mobile 사이즈 (768*300) </p>
-                </figure>
-                <div class="close">
-                  <a href="#"><img src="assets/images/close.png" alt="닫힘아이콘"></a>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div id="redesigns"class="web01">
-          <div class="web_left">
-            <span>#1</span>
-            <h3>Baskin Robbins</h3>
-            <i>Desktop Web</i>
-            <i>Main Page</i>
-            <b>리디자인 & 퍼블리싱 100%</b>
-            <p>한눈에 시선을 사로잡는 다양한 슬라이드와 마우스 오버효과로 동적인 요소를 구현하고, 배스킨라빈스 메인 컬러를 이용한 포인트 텍스트를 디자인하였습니다.</p>
-            <div class="view_more">
-              <p><a href="./redesignSite/baskinRobbins/index.html" target='_blank'>View More</a></p>
-            </div>
-          </div>
-          <div class="web_right">
-            <img src="assets/images/mac_mockup.png" alt="맥 목업">
-            <figure>
-              <img src="assets/images/br_screen.png" alt="배스킨라빈스 전체스크린샷">
-            </figure>
-          </div>
-        </div>
-        <div id="web02" class="web02">
-          <div class="web_left">
-            <span>#2</span>
-            <h3>Design House</h3>
-            <i>Desktop Web</i>
-            <i>Main Page</i>
-            <b>리디자인 & 퍼블리싱 100%</b>
-            <p>디자인하우스는 디지털매거진으로 기존의 메인컬러를 유지하되 디지털매거진만이 가질 수 있는 동적인 효과를 위한 슬라이드 & 애니메이션 효과를 구현하였습니다.</p>
-            <div class="view_more">
-              <p><a href="./redesignSite/designHouse/index.html" target="_blank">View More</a></p>
-            </div>
-          </div>
-          <div class="web_right">
-            <img src="assets/images/mac_mockup.png" alt="맥 목업">
-            <figure>
-              <img src="assets/images/designhouse.png" alt="디자인하우스 전체스크린샷">
-            </figure>
-          </div>
-        </div>
-        <div id="web03" class="web03">
-          <div class="web_left">
-            <span>#3</span>
-            <h3>경기아트센터</h3>
-            <i>Desktop Web</i>
-            <i>Main Page</i>
-            <b>리디자인 & 퍼블리싱 100%</b>
-            <p>경기아트센터는 공연 안내 및 예매를 위한 사이트로 사용자의 UI/UX를 우선으로 하며 슬라이드와 애니메이션을 구현함과<br> 동시에 깔끔한 폰트와 아이콘을 통해 신뢰도를 높였습니다.</p>
-            <div class="view_more">
-              <p><a href="./redesignSite/ggac/index.html" target="_blank">View More</a></p>
-            </div>
-          </div>
-          <div class="web_right">
-            <img src="assets/images/mac_mockup.png" alt="맥 목업">
-            <figure>
-              <img src="assets/images/artcenter.png" alt="경기아트센터 전체스크린샷">
-            </figure>
-          </div>
-        </div>
-        <div id="web04" class="web04">
-          <div class="web_left">
-            <span>#4</span>
-            <h3>미에로화이바</h3>
-            <i>Responsive Web</i>
-            <i>Main Page</i>
-            <b>리디자인 & 퍼블리싱 100%</b>
-            <p>CSS와 JavaScript를 활용한 다양한 애니메이션과 슬라이드 구현을 통하여 동적인 홈페이지를 구현하고 미디어쿼리를 통해 여러 사용자환경에 반응하도록 제작하였습니다.</p>
-            <div class="view_more">
-              <p><a href="./redesignSite/Miero/index.html" target="_blank">View More</a></p>
-            </div>
-          </div>
-          <div class="web_right">
-            <div class="mac">
-              <img src="assets/images/mac_mockup.png" alt="맥 목업">
-              <figure>
-                <img src="assets/images/miero_pc.png" alt="미에로화이바 전체스크린샷">
-              </figure>
-            </div>
-            <div class="pad">
-              <img src="assets/images/pad_mockup.png" alt="패드 목업">
-              <figure>
-                <img src="assets/images/miero_pad.png" alt="미에로화이바 전체스크린샷">
-              </figure>
-            </div>
-            <div class="phone">
-              <img src="assets/images/phone_mockup.png" alt="폰 목업">
-              <figure>
-                <img src="assets/images/miero_mobile.png" alt="미에로화이바 전체스크린샷">
-              </figure>
-            </div>
-          </div>
-        </div>
-        <div id="application" class="app01">
-          <div class="app_left">
-            <span>#1</span>
-            <h3>Midnight</h3>
-            <i>Application</i>
-            <b>기획 & 리디자인 & 퍼블리싱 100%</b>
-            <p>미드나잇은 영화와 TV 프로그램을 시청할 수 있는 멤버십 <br>기반의 스트리밍 서비스로 기존의 OTT 서비스에서 한발 나아가 사용자의 취향을 사용자의 평점과 시청기록을 통해 분석하여<br> <취향분석> 탭을 통해 제공하는데 차별점을 가진다. </p>
-            <div class="view_more">
-              <p><a class="appDirect" href="./appDesign/home.html" target="_blank">View More</a></p>
-            </div>
-          </div>
-          <div class="app_right">
-            <section class="app_right1">
-              <img src="assets/images/phone_mockup.png" alt="폰 목업">
-              <figure>
-                <img src="assets/images/midnight_home.png" alt="미드나잇 전체스크린샷">
-              </figure>
-            </section>
-            <section class="app_right2">
-              <img src="assets/images/phone_mockup.png" alt="폰 목업">
-              <figure>
-                <img src="assets/images/midnight_allmenu.png" alt="미드나잇 전체스크린샷">
-              </figure>
-            </section>
-          </div>
-        </div>
-        <div id="app02" class="app02">
-          <div class="app_left">
-            <h2>"오늘 하루도 수고한 당신,<br>당신의 취향을<br>저격해드립니다"</h2>
-            <section class="keywords">
-              <h3>Keywords</h3>
-              <span>#하루의 마무리</span><span>#힐링</span><span>#퇴근길</span><span>#취향분석</span>
-              <p>#영화 드라마 예능 다큐멘터리</p>
-              <span>#옐로우</span><span>#네이비</span><span>#퍼플</span><span>#그레이</span>
-            </section>
-            <section class="typo">
-              <h3>Typography</h3>
-              <span class="light">Noto Sans KR Light</span>
-              <span class="regular">Noto Sans KR Regular</span><br>
-              <span class="medium">Noto Sans KR Medium</span>
-              <span class="bold">Noto Sans KR Bold</span>
-            </section>
-            <section class="color">
-              <h3>Color</h3>
-              <ul>
-                <li>#FFDF2C</li>
-                <li>#2E2C5B</li>
-                <li>#9F84BC</li>
-                <li>#13151B</li>
-              </ul>
-            </section>
-          </div>
-          <div class="app_right">
-            <figure class="train">
-              <img src="assets/images/train.jpg" alt="지하철 사람들">
-            </figure>
-            <figure class="night">
-              <img src="assets/images/load.jpg" alt="밤거리 신호등">
-            </figure>
-            <figure class="nightli">
-              <img src="assets/images/jedit.png" alt="밤거리 일러스트">
-            </figure>
-          </div>
-        </div>
-        <div id="app03"class="app03">
-          <div class="app_left">
-            <h2>미드나잇만의 포인트!!</h2>
-            <div class="point1">
-              <figure>
-                <img src="assets/images/midnight_logo.png" alt="미드나잇 로고">
-              </figure>
-              <div class="point_text">
-                <h3>#1 한눈에 쏙 들어오는 아이콘</h3>
-                <p>다양한 영상 콘텐츠에 묻히지 않는 화려하고 <br>특징을 살린 아이콘 디자인</p>
-              </div>
-            </div>
-            <div class="point2">
-              <figure>
-                <img src="assets/images/midnight_logo.png" alt="미드나잇 로고">
-              </figure>
-              <div class="point_text">
-                <h3>#2 사용자 중심의 UI/UX</h3>
-                <p>처음 사용하는 사용자도 직관적으로,<br> 그리고 미드나잇만의 컬러감까지</p>
-              </div>
-            </div>
-            <div class="point3">
-              <figure>
-                <img src="assets/images/midnight_logo.png" alt="미드나잇 로고">
-              </figure>
-              <div class="point_text">
-                <h3>#3 다른 앱과 차별화된 취향저격 시스템</h3>
-                <p>대표적인 OTT 플랫폼과의 차별화</p>
-                <p>-별점 0~5개까지 디테일한 평가가능</p>
-                <p>-이미 감상한 콘텐츠와 비슷한 콘텐츠 추천</p>
-              </div>
-            </div>
-          </div>
-          <div class="app_right">
-            <div class="phone1">
-              <img src="assets/images/phone_mockup.png" alt="폰 목업">
-              <figure>
-                <img src="assets/images/midnight_allmenu.png" alt="미드나잇 전체메뉴 전체스크린샷">
-              </figure>
-              <div class="zoom">
-                <img src="assets/images/midnight_allmenu.png" alt="미드나잇 전체메뉴 전체스크린샷">
-              </div>
-            </div>
-            <div class="phone2">
-              <img src="assets/images/phone_mockup.png" alt="폰 목업">
-              <figure>
-                <img src="assets/images/midnight_star.PNG" alt="미드나잇 취향분석 전체스크린샷">
-              </figure>
-              <div class="zoom">
-                <img src="assets/images/midnight_star.PNG" alt="미드나잇 취향분석 전체스크린샷">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="contact" class="contact">
-          <div class="contact_left">
-            <h2>#Contact Me</h2>
-            <ul>
-              <li><img src="assets/images/profile.png" alt="프로필아이콘">김로운</li>
-              <li><img src="assets/images/phone.png" alt="프로필아이콘">010-8261-6970</li>
-              <li><img src="assets/images/mail.png" alt="프로필아이콘">fhdns2654@naver.com</li>
-              <li><a href="RohwoonResume.pdf" download target="_blank"><img src="assets/images/paper.png" alt="프로필아이콘">이력서 다운로드</a></li>
-            </ul>
-          </div>
-          <div class="contact_right">
-            <figure>
-              <img src="assets/images/contact_icon.png" alt="컨텍트 아이콘">
-            </figure>
-            <p>저의 꿈을 향한 발걸음을 봐주셔서 감사합니다.<br> 보여드리고 싶었던 모습은 "저 이렇게 잘해요~"라는 모습도 있지만 "신입이라 부족한 면이 있지만 이렇게 열정 있습니다"를 보여드리기 위해 노력했습니다. 누가 시키지 않아도 열심히 일하는 모습, 부족한 점은 스스로 찾고 노력하는 모습을 보여드리겠습니다! </p>
-          </div>
-        </div>
-      </div>
     </div>
-  </body>
+</header>
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <!--            <div class="swiper-slide" data-title="Home">-->
+        <!--                <h2>Home</h2>-->
+        <!--            </div>-->
+        <div class="swiper-slide profile" data-title="Profile">
+            <h2 class="visually-hidden">Profile</h2>
+            <div class="left">
+                <span class="profile-image"></span>
+                <p>
+                    안녕하세요 웹 퍼블리셔 김로운입니다!<br>
+                </p>
+            </div>
+            <div class="right"></div>
+        </div>
+        <!--                <div class="swiper-slide" data-title="publishing01">-->
+        <!--                    <h2>publishing</h2>-->
+        <!--                    <div class="web_left">-->
+        <!--                        <h3>-->
+        <!--                            <span>#1</span>-->
+        <!--                            하이픈-->
+        <!--                        </h3>-->
+        <!--                        <ul>-->
+        <!--                            <li>pc, mobile</li>-->
+        <!--                        </ul>-->
+        <!--                        <p>-->
+        <!--                            <a href="./redesignSite/baskinRobbins/index.html" target='_blank'>View More</a>-->
+        <!--                        </p>-->
+        <!--                    </div>-->
+        <!--                    <div class="web_right">-->
+        <!--                        <img src="assets/images/mac_mockup.png" alt="맥 목업">-->
+        <!--                        <figure>-->
+        <!--                            <img src="assets/images/br_screen.png" alt="배스킨라빈스 전체스크린샷">-->
+        <!--                        </figure>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--                <div class="swiper-slide" data-title="publishing02">-->
+        <!--                    <h2>publishing</h2>-->
+        <!--                    <div class="web_left">-->
+        <!--                        <h3>-->
+        <!--                            <span>#2</span>-->
+        <!--                            에그드롭-->
+        <!--                        </h3>-->
+        <!--                        <ul>-->
+        <!--                            <li>pc, mobile</li>-->
+        <!--                        </ul>-->
+        <!--                        <p>-->
+        <!--                            <a href="./redesignSite/baskinRobbins/index.html" target='_blank'>View More</a>-->
+        <!--                        </p>-->
+        <!--                    </div>-->
+        <!--                    <div class="web_right">-->
+        <!--                        <img src="assets/images/mac_mockup.png" alt="맥 목업">-->
+        <!--                        <figure>-->
+        <!--                            <img src="assets/images/br_screen.png" alt="배스킨라빈스 전체스크린샷">-->
+        <!--                        </figure>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--                <div class="swiper-slide" data-title="publishing03">-->
+        <!--                    <h2>publishing</h2>-->
+        <!--                    <div class="web_left">-->
+        <!--                        <h3>-->
+        <!--                            <span>#3</span>-->
+        <!--                            유암코-->
+        <!--                        </h3>-->
+        <!--                        <ul>-->
+        <!--                            <li>pc, mobile</li>-->
+        <!--                        </ul>-->
+        <!--                        <p>-->
+        <!--                            <a href="./redesignSite/baskinRobbins/index.html" target='_blank'>View More</a>-->
+        <!--                        </p>-->
+        <!--                    </div>-->
+        <!--                    <div class="web_right">-->
+        <!--                        <img src="assets/images/mac_mockup.png" alt="맥 목업">-->
+        <!--                        <figure>-->
+        <!--                            <img src="assets/images/br_screen.png" alt="배스킨라빈스 전체스크린샷">-->
+        <!--                        </figure>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</body>
+
 </html>
